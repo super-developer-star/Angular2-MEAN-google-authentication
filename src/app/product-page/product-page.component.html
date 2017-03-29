@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row" style="margin-top:100px;">
+        <p><button class="btn btn-default" (click)="logout()">Logout</button></p>
+    </div>
+</div>
+
+<form class="well" (submit)="addProduct($event)">
+    <div class="form-group">
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add Product title..."><br>
+        <input type="text" [(ngModel)]="price" name="price" class="form-control" placeholder="Add Product price...">
+        <button id="submit" type="submit" class="btn btn-success">Add</button>
+    </div>
+</form>
+
+<div class="product-list">
+    <div *ngFor="let product of products">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <input type="checkbox">
+                </div>
+                <div class="col-lg-3 row-spacing">
+                    {{product.title}}
+                </div>
+                <div class="col-lg-3 row-spacing">
+                    {{product.price}}
+                </div>
+                <div class="col-lg-3 row-spacing">
+                    <input type="button" (click)="deleteProduct(product._id)" value="Delete" class="btn btn-danger">
+                </div>
+
+            </div>
+        </div>
+
+    </div>

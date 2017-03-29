@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div *ngIf="isLoggedIn">
+                <p class="navbar-text navbar-right">Logged In</p>
+            </div>
+            <div *ngIf="!isLoggedIn">
+                <p class="navbar-text navbar-right">Logged Out</p>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+</div>

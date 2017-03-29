@@ -1,0 +1,19 @@
+.btn {
+    margin-left: 1px;
+}
+
+#submit {
+    margin-top: -107px;
+    float: right;
+    margin-right: -104px;
+    height: 142px;
+    width: 70px;
+}
+
+.well {
+    width: 77%;
+}
+
+.row-spacing {
+    margin-top: 10px;
+}
